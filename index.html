@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="bg-container">
+        <img src="https://cdn.pixabay.com/photo/2015/10/01/17/17/car-967387_960_720.png" alt="carmaro" id="image">
+        <h1 id="text">Parallax</h1>
+        <img src="https://images.pexels.com/photos/2739013/pexels-photo-2739013.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="background" id="bg">
+    </div>
+
+    <script type="text/javascript">
+        let bg = document.getElementById('bg');
+        let text = document.getElementById('text');
+        let image = document.getElementById('image');
+
+        window.addEventListener('scroll', ()=>{
+            let value = window.scrollY;
+            bg.style.top = value * 0.25 + 'px';
+            bg.style.top = value * 0.15 + 'px';
+        })
+    </script>
+</body>
+
+</html>
